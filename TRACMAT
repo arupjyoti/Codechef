@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define f(i,n) for(ll i=0;i<n;i++)
+#define fastio ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define T ll t; cin>>t; while(t--)
+#define mod 1000007
+#define vp vector< pair <ll,ll> >
+#define vt vector<ll>
+#define mp(i,j) make_pair(i,j)
+
+int main()
+{
+    fastio;
+    ll n,temp;
+    
+    T{
+    cin>>n;
+    ll a[1000][1000],s=0;
+    memset(a,0,sizeof(a[100])/sizeof(a[0]));
+    f(i,n)
+    {
+    f(j,n)
+    {
+        cin>>a[i][j];
+    }}
+    for(ll i=1;i<n;++i)
+    {
+        for(ll j=1;j<n;++j)
+        {
+            temp = a[i][j]+a[i-1][j-1];
+            s=max(s,temp);
+        }
+    }
+    cout<<s;
+}
+}
