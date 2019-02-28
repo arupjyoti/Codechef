@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define fastio ios::sync_with_stdio(0); cout.tie(0);cin.tie(0);
+#define trav(i,n) for(auto& i : n)
+#define f(i,n) for(lli i=0;i<n.size();++i)
+#define r(j) for(lli j=0;j<26;++j)
+#define T lli t; cin>>t; while(t--)
+using namespace std;
+
+
+int main()
+{
+    fastio;
+    
+    
+  lli nt=0;
+    T{
+        bitset<26> f; f.set();
+        lli n;
+        string s;
+        cin>>n;   
+        while(n--)
+        {
+            cin>>s;
+            bitset<26> sc;
+            trav(i,s){
+                sc[i - 'a'] = 1;
+                }
+            f = f&sc;
+            
+        } 
+         cout<<f.count()<<"\n";
+    }
+    
+}
